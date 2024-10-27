@@ -9,9 +9,9 @@ def loto_olustur():
         for i in range(kolon_sayisi):
             # kolonu set atarız çünkü aynı elemanı birden fazla kez tutmaz 
             kolon = set()
-            while len(kolon) < 6:
+            while len(kolon) < 6:#sayıların sayısını len ile birlikte uzunluk ölçerek buluyoruz
                 rastgele_sayi = random.randint(1, 90)
-                if rastgele_sayi not in istenmeyen:
+                if rastgele_sayi not in istenmeyen:# sayı rastgele sayılarda bulunur ve sayı istenmeyen sayılarda bulunmazsa
                     kolon.add(rastgele_sayi)
             print(f"{i+1}. kolon: {sorted(kolon)}")
 loto_olustur()
